@@ -3,8 +3,7 @@
 	License: MIT
 	To use: Include jQuery and this file on your page and include the class name expand in your textareas class attribute
 	i.e. <textarea id="myText" class="someClass expand"></textarea>
-
-	Original Credit: Jack Moore	
+	Original Credit: Jack Moore
 	http://www.jacklmoore.com/autosize
 */
 (function (e) {
@@ -13,31 +12,24 @@
 })(jQuery || $);
 
 /*(function ($) {
-
     $.fn.textareaExpander = function (options) {
-
         var defaults = {
             minHeight: 'inherit',
             animate: true,
             animateDuration: 100
         };
-
         options = $.extend({}, defaults, options);
-
         var checkResize = function () {
             var $this = $(this),
                 prevHeight = $this.height(),
                 rowHeight = $this.css('fontSize'),
                 newHeight = 0;
-
             $this.height(rowHeight);
             newHeight = this.scrollHeight;
             $this.height(prevHeight);
-
             if (newHeight < options.minHeight) {
                 newHeight = options.minHeight;
             }
-
             // Mozilla handles some things differently here...so we need to detect it
             //and deal with it. :p
             if (!$.browser.mozilla) {
@@ -48,14 +40,12 @@
                     newHeight -= padInt;
                 }
             }
-
             options.animate ?
                 $this.stop().animate({
                     height: newHeight
                 }, options.animateDuration)
                 : $this.height(newHeight);
         }
-
         return this.filter('textarea').each(function () {
             var $this = $(this);
             if (options.minHeight == 'inherit') {
@@ -74,7 +64,6 @@
         });
     };
 })(jQuery);
-
 */
 // initialize all expanding textareas
 jQuery(document).ready(function() {
